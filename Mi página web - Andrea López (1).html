@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi página web - Andrea López</title>
+<style>
+:root{--c:#38b6ff;--d:#0b6fa8;--bg:#f4fbff;--l:#d9f0ff;--t:#12384f;--w:#fff}
+body.dark{--bg:#0e2230;--l:#16394f;--t:#e6f6ff;--w:#12303f;--d:#8fd8ff}
+*{box-sizing:border-box}
+body{margin:0;font:13px/1.4 Arial,sans-serif;background:var(--bg);color:var(--t)}
+header{background:var(--c);color:#fff;padding:12px 14px}
+.top{display:flex;align-items:center;gap:10px}
+.top img{width:48px;height:48px;border-radius:50%;background:#fff}
+h1{margin:0;font-size:18px}
+.top p{margin:2px 0 0;font-size:11px}
+nav{display:flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin-top:10px;font-size:12px}
+nav a{color:#fff;text-decoration:none}
+#tema{margin-left:auto;background:#fff;color:var(--d);border:0;border-radius:5px;padding:6px 10px;font-weight:bold;font-size:12px}
+.wrap{display:grid;grid-template-columns:1fr 30%}
+main{padding:10px}
+aside{background:var(--l);padding:10px}
+aside h3{margin:0;font-size:13px;color:var(--d)}
+aside p{margin:2px 0 8px;font-size:11px}
+section,details{background:var(--w);border:1px dashed var(--c);border-radius:4px;padding:8px 10px;margin-bottom:10px}
+details{padding:6px 8px;margin:0}
+h2{margin:0 0 5px;font-size:13px;color:var(--d)}
+summary{font-weight:bold;font-size:12px}
+p{margin:4px 0}
+a{color:var(--d)}
+mark{background:#ffe680;padding:0 3px}
+blockquote{margin:5px 0;padding:4px 8px;border-left:3px solid var(--c);background:var(--l);font-style:italic}
+ul,ol{display:flex;flex-wrap:wrap;gap:0 14px;margin:2px 0;padding:0 0 0 16px}
+dl{margin:2px 0}dd{margin:0 0 0 12px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{background:var(--c);color:#fff;text-align:left;padding:3px 6px}
+td{border:1px solid var(--c);padding:3px 6px}
+.m{display:flex;gap:8px;align-items:flex-start}
+figure{margin:0;flex:1}
+figure svg,video{width:100%;display:block;border-radius:4px}
+video{flex:1.2;min-width:0;background:#000}
+figcaption{font-size:11px;font-style:italic}
+label{display:grid;grid-template-columns:62px 1fr;align-items:center;gap:6px;margin-bottom:6px}
+input,select{width:100%;max-width:220px;padding:5px;border:1px solid var(--c);border-radius:3px;background:var(--w);color:var(--t)}
+form button{background:var(--c);color:#fff;border:0;border-radius:5px;padding:7px 16px;font-weight:bold}
+.ok{margin:8px 0 0;padding:8px;background:#dcfce7;border:1px solid #22c55e;color:#14532d;border-radius:5px;font-weight:bold}
+footer{background:#14283a;color:#fff;text-align:center;padding:12px;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+ <div class="top">
+  <img src="data:image/jpeg;base64,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" alt="Logo CETAC">
+  <div><h1>Mi página web</h1><p>Andrea López · Control: 25207040220074 · 15 de octubre</p></div>
+ </div>
+ <nav>
+  <a href="#texto">Texto</a><a href="#listas">Listas</a><a href="#tabla">Tabla</a><a href="#multimedia">Multimedia</a><a href="#formulario">Formulario</a><a href="#contacto">Contacto</a>
+  <button id="tema" type="button">Cambiar tema</button>
+ </nav>
+</header>
+
+<div class="wrap">
+<main>
+ <section id="texto"><h2>Elementos de texto</h2>
+  <p>Párrafo con <strong>negrita</strong>, <em>cursiva</em> y <mark>resaltado</mark>. <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener">Enlace externo</a>.</p>
+  <blockquote>Cita destacada: programar es resolver problemas paso a paso.</blockquote>
+ </section>
+
+ <section id="listas"><h2>Listas</h2>
+  <ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+  <ol><li>Crear</li><li>Escribir</li><li>Publicar</li></ol>
+  <dl><dt><b>Término</b></dt><dd>descripción</dd></dl>
+ </section>
+
+ <section id="tabla"><h2>Tabla</h2>
+  <table><tr><th>Tecnología</th><th>Función</th></tr>
+  <tr><td>HTML</td><td>Estructura</td></tr>
+  <tr><td>CSS</td><td>Diseño</td></tr>
+  <tr><td>JavaScript</td><td>Interactividad</td></tr></table>
+ </section>
+
+ <section id="multimedia"><h2>Multimedia</h2>
+  <div class="m">
+   <figure>
+    <svg viewBox="0 0 320 200"><rect width="320" height="200" rx="8" fill="#0f2a3d"/><rect width="320" height="24" rx="8" fill="#16394f"/><circle cx="14" cy="12" r="5" fill="#ff5f56"/><circle cx="30" cy="12" r="5" fill="#ffbd2e"/><circle cx="46" cy="12" r="5" fill="#27c93f"/>
+    <g font-family="monospace" font-size="15"><text x="16" y="55" fill="#7dd3fc">&lt;html&gt;</text><text x="30" y="80" fill="#fca5a5">&lt;h1&gt;Hola&lt;/h1&gt;</text><text x="30" y="105" fill="#86efac">console.log("Andrea");</text><text x="30" y="130" fill="#fde68a">function saludar(){}</text><text x="16" y="155" fill="#7dd3fc">&lt;/html&gt;</text></g></svg>
+    <figcaption>Pie de foto: código</figcaption>
+   </figure>
+   <video controls preload="metadata"><source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4"></video>
+  </div>
+ </section>
+
+ <section id="formulario"><h2>Formulario</h2>
+  <form id="form">
+   <label>Nombre <input id="nombre" required></label>
+   <label>Correo <input type="email" required></label>
+   <label>País <select required><option value="">Selecciona…</option><option>México</option><option>Guatemala</option><option>Colombia</option><option>España</option><option>Otro</option></select></label>
+   <button type="submit">Enviar</button>
+   <p id="ok" class="ok" hidden></p>
+  </form>
+ </section>
+</main>
+
+<aside>
+ <h3>Barra lateral</h3><p>Contenido relacionado</p>
+ <details><summary>Desplegable</summary><p>Ver más contenido</p></details>
+</aside>
+</div>
+
+<footer id="contacto">© 2026 Andrea López. Hecho con HTML, CSS y JavaScript.</footer>
+
+<script>
+form.onsubmit=function(e){e.preventDefault();
+ ok.textContent='✅ ¡Envío exitoso! Gracias, '+nombre.value.trim()+'.';
+ ok.hidden=false;form.reset();setTimeout(function(){ok.hidden=true},6000)};
+tema.onclick=function(){document.body.classList.toggle('dark')};
+</script>
+</body>
+</html>
